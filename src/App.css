@@ -13,6 +13,12 @@
   }
 }
 
+.herosectionimg{
+  background-image: url("C:\Users\Saeed Ahmed\Desktop\front-end\src\assets\3260 1.png");
+  height: 200px;
+  width: 100%;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
