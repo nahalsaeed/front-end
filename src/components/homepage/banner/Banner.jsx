@@ -9,9 +9,9 @@ import group5 from "../../../assets/Vector.png";
 
 const Banner = () => {
     return (
-        <div className="bg-[#2B54FF] mt-10 w-screen h-[80vh] relative">
-            <img src={Group1} alt="stripes" className="absolute -top-72 right-0 h-[800px] " />
-            <img src={Group2} alt="img" className="absolute -bottom-[264px]" />
+        <div className="bg-[#2B54FF] mt-10 w-screen h-auto  relative overflow-hidden ">
+            <img src={Group1} alt="stripes" className="absolute -top-72 right-0 h-[500px]  lg:h-[800px] " />
+            <img src={Group2} alt="img" className="absolute -bottom-[264px] h-[400px] lg:h-auto" />
             <div className="flex items-center justify-center">
                 <div className="w-[60%] flex flex-col mt-44 ">
                     <h1 className="text-3xl font-serif text-white text-left">
@@ -39,7 +39,7 @@ const Banner = () => {
                                 data analyst.
                             </p>
                         </div>
-                        <div className="flex flex-col items-center text-left ">
+                        <div className="flex flex-col items-center text-left  mb-10 ">
                             <img src={group5} alt="Icon 3" className="w-16 mb-8" />
                             <h2 className="text-xl font-semibold mb-2">Suitable for All Levels</h2>
                             <p>

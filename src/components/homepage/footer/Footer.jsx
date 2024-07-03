@@ -32,12 +32,7 @@ const Footer = () => {
 
                     {images.map((image, index) => (
                        <div className="p-4 rounded-full  border border-blue-700 ">
-                            <img
-                                key={index}
-                                src={image}
-                                alt={`Image ${index + 1}`}
-                                className="max-w-full h-auto "
-                            /></div>
+                            <img key={index} src={image} alt={`Image ${index + 1}`} className="max-w-full h-auto " /></div>
                         ))}
                     </div>
 

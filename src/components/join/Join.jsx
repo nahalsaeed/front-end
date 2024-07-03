@@ -18,7 +18,7 @@ const Join = () => {
             <div className="flex justify-center">
                 <div className="w-[70%] grid grid-cols-1 lg:grid-cols-2 gap-16 mt-6">
                     <div>
-                        <img src={join} alt="join" className="h-[450px] w-auto" />
+                        <img src={join} alt="join" className="h-auto w-auto" />
                     </div>
                     <div>
                         <h1 className="text-5xl text-end font-serif mt-24">Join Our <br /><span className="text-blue-700">Community</span></h1>

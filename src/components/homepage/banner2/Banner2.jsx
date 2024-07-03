@@ -6,9 +6,9 @@ import group4 from "../../../assets/Group (5).png";
 
 const Banner2=()=>{
     return(
-        <div className="bg-[#2B54FF] mt-[72rem] w-screen h-[80vh] relative">
-        <img src={Group1} alt="stripes" className="absolute -top-72 right-0 h-[800px]" />
-        <img src={Group2} alt="img" className="absolute -bottom-[264px]" />
+        <div className="bg-[#2B54FF]  w-screen h-auto  relative overflow-hidden">
+        <img src={Group1} alt="stripes" className="absolute -top-72 right-0  h-[500px]   lg:h-[800px]" />
+        <img src={Group2} alt="img" className="absolute -bottom-[264px] h-[400px] lg:h-auto" />
         <div className="flex items-center justify-center">
             <div className="w-[60%] flex flex-col mt-44 ">
                 <h1 className="text-3xl font-serif text-white text-center">
@@ -28,8 +28,8 @@ const Banner2=()=>{
                     <img src={group4} alt="Item 2" className="w-full h-auto object-cover" />
                 </div>
             </div>
-            <div className="flex justify-center items-center mt-12">
-                <button className="text-white text-base border p-2 px-5 rounded-3xl">Get Started</button>
+            <div className="flex justify-center items-center mt-12 lg:mb-10">
+                <button className="text-white text-base border p-2 px-5 rounded-3xl hover:text-[#2B54FF] hover:bg-white">Get Started</button>
             </div>
         </div>
     </div>

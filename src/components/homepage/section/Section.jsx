@@ -3,14 +3,14 @@ import img from "../../../assets/Group (1).png"
 const Section = () => {
     return (
         <div>
-            <div className="bg-[#2B54FF] h-[545px] mt-10">
-                <img src={img} alt="img" className="absolute right-0 transform rotate-180" />
-                <img src={img} alt="img " className="absolute left-0 " />
+            <div className="bg-[#2B54FF] h-[545px] mt-10 relative overflow-hidden">
+                <img src={img} alt="img" className="absolute  -top-[270px] lg:top-0 right-0 transform rotate-180 " />
+                <img src={img} alt="img " className="absolute left-0  -bottom-[270px] lg:bottom-0" />
                 <div className="flex flex-col justify-center items-center h-[545px]">
                     <h1 className="text-center text-white text-5xl font-serif">Get Started Today</h1>
                     <p className="text-center text-white mt-2 text-sm">Don't leave success up to chance.</p>
                     <div className="flex justify-center mt-8">
-                        <button className="text-white border border-white px-4 p-2 rounded-3xl">Get started</button>
+                        <button className="text-white border border-white px-4 p-2 rounded-3xl hover:text-[#2B54FF] hover:bg-white">Get started</button>
                     </div>
                 </div>
             </div>

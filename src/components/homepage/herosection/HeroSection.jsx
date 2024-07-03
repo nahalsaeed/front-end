@@ -11,28 +11,24 @@ import Image5 from "../../../assets/image 8.png";
 const HeroSection = () => {
     return (
         <div >
-            {/* <img src={Hero} alt="hersectionimg" className="relative" /> */}
             <div className="herosectionimg"></div>
-            <div className="flex flex-row justify-center gap-16 ">
-                <div className="text-left max-w-[30%] h-[400px]">
-                    <div>
-                        <h1 className="text-7xl text-bold font-serif">Learn With</h1>
+            <div className="flex justify-center  -mt-44 ">
+                <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-8 mx-8 lg:mx-16">
+                    <div className="text-left lg:max-w-[80%] h-auto lg:ml-20 lg:mt-10">
+                        <h1 className="text-7xl font-bold font-serif">Learn With</h1>
                         <br />
-                        <h1 className="text-6xl text-bold font-serif text-[#2B54FF]">SQL QUIZBOT</h1>
+                        <h1 className="text-6xl font-bold font-serif text-[#2B54FF]">SQL QUIZBOT</h1>
+                        <br />
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris lacus leo, feugiat id faucibus in, rhoncus eu nisi. Nunc tincidunt dignissim urna eu iaculis. Suspendisse nulla tortor, volutpat nondictum vel, imperdiet at nulla. Pellentesque lobortis quam lorem, pretium ullamcorper lectus.</p>
+                        <div className="text-sm flex flex-row gap-2 mt-10">
+                            <button className="text-[#2B54FF] p-2 border border-[#2B54FF] rounded-3xl">Join Prep Community</button>
+                            <button className="text-white p-2 bg-[#2B54FF] px-4 rounded-3xl">SQL Pads</button>
+                        </div>
                     </div>
-                    <br />
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris lacus leo, feugiat id faucibus in, rhoncus eu nisi. Nunc tincidunt dignissim urna eu iaculis. Suspendisse nulla tortor, volutpat nondictum vel, imperdiet at nulla. Pellentesque lobortis quam lorem, pretiumull amcorper lectus </p>
-                    <div className="text-sm flex flex-row gap-2 mt-10">
-                        <button className=" text-[#2B54FF] p-2 border border-[#2B54FF] rounded-3xl  ">Join Prep Community</button>
-                        <button className=" text-white p-2 bg-[#2B54FF] px-4 rounded-3xl  ">Pads</button>
-
+                    <div className="flex justify-center items-center lg:max-w-[100%] h-auto">
+                        <img src={Group} alt="img" className="max-h-[420px] w-auto" />
                     </div>
                 </div>
-                <div className="max-w-[50%] flex ml-7 h-[420px] w-auto">
-                    <img src={Group} alt="img" />
-                </div>
-
-
             </div>
             <div className="text-center mt-20 ">
                 <p>Trusted by talents with <span className="text-[#2B54FF]">$240K+ compensation offers at</span></p>
