@@ -1,7 +1,10 @@
 import React from "react";
 import Facebook from "../../assets/logos_facebook.svg";
 import Google from "../../assets/flat-color-icons_google.svg";
-import Subtract from "../../assets/Subtract.png"
+import Subtract from "../../assets/Subtract.png";
+import circle from "../../assets/Ellipse 1.png";
+import circle2 from "../../assets/Ellipse 2.png";
+
 import { Link } from "react-router-dom";
 const Login = () => {
   return (

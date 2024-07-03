@@ -1,12 +1,12 @@
 import React from "react";
 import Group from "../../../assets/Group.png";
 import '../../../App.css';
-import Google from "../../../assets/image 3.png";
-import Image1 from "../../../assets/image 4.png";
-import Image2 from "../../../assets/image 5.png";
-import Image3 from "../../../assets/image 6.png";
-import Image4 from "../../../assets/image 7.png";
-import Image5 from "../../../assets/image 8.png";
+import Google from "../../../assets/google.png";
+import Image1 from "../../../assets/meta.png";
+import Image2 from "../../../assets/prime.png";
+import Image3 from "../../../assets/lya.png";
+import Image4 from "../../../assets/apple.png";
+import Image5 from "../../../assets/microsoft.png";
 
 const HeroSection = () => {
     return (

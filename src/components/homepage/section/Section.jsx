@@ -1,5 +1,5 @@
 import React from "react";
-import img from "../../../assets/Group (1).png"
+import img from "../../../assets/stripe2.png"
 const Section = () => {
     return (
         <div>

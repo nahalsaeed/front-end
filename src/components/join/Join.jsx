@@ -1,9 +1,9 @@
 import React from "react";
-import join from "../../assets/Group (6).png";
-import image1 from "../../assets/Group 3594.png";
-import image2 from "../../assets/Group 3596.png";
-import image3 from "../../assets/Group 3602.png";
-import image4 from "../../assets/Group 3601.png";
+import join from "../../assets/arrow.png";
+import image1 from "../../assets/x1.png";
+import image2 from "../../assets/x2.png";
+import image3 from "../../assets/x3.png";
+import image4 from "../../assets/x4.png";
 
 const Join = () => {
     const images = [

@@ -1,8 +1,8 @@
 import React from "react";
-import Group1 from "../../../assets/Subtract (1).png";
-import Group2 from "../../../assets/Group (1).png";
-import group from "../../../assets/Group (4).png";
-import group4 from "../../../assets/Group (5).png";
+import Group1 from "../../../assets/stripes1.png";
+import Group2 from "../../../assets/stripe2.png";
+import group from "../../../assets/sql.png";
+import group4 from "../../../assets/bot.png";
 
 const Banner2=()=>{
     return(

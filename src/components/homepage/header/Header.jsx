@@ -21,7 +21,6 @@ const Header = () => {
                 <div className="container mx-auto flex justify-between items-center">
                     <div className="text-white text-2xl font-bold ml-24 fon">SQL BOT</div>
                     
-                    {/* Hamburger Button */}
                     <button
                         onClick={toggleMenu}
                         className="lg:hidden inline-flex items-center justify-center p-2 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
@@ -40,7 +39,6 @@ const Header = () => {
                         )}
                     </button>
 
-                    {/* Desktop Menu */}
                     <ul className="hidden lg:flex space-x-4 ml-[460px] text-sm">
                         <li>
                             <a href="#home" className="text-white hover:text-gray-200">Home</a>
@@ -53,7 +51,6 @@ const Header = () => {
                         </li>
                     </ul>
 
-                    {/* Desktop Buttons */}
                     <div className="hidden lg:flex space-x-4">
                         <button className="text-white text-sm border p-2 rounded-3xl hover:text-[#2B54FF] hover:bg-white">
                             <Link to="/SignUp">Create Account</Link>
@@ -64,7 +61,6 @@ const Header = () => {
                     </div>
                 </div>
 
-                {/* Mobile Menu */}
                 {isMenuOpen && (
                     <div className="lg:hidden">
                         <ul className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
@@ -90,13 +86,7 @@ const Header = () => {
                 )}
             </nav>
 
-            <HeroSection />
-            <Banner />
-            <Help />
-            <Banner2 />
-            <Join />
-            <Section />
-            <Footer />
+           
         </div>
     );
 };

@@ -1,8 +1,8 @@
 import React from "react";
-import Group1 from "../../../assets/Subtract (1).png";
-import Group2 from "../../../assets/Group (1).png";
-import group3 from "../../../assets/Group (2).png";
-import group4 from "../../../assets/Group (3).png";
+import Group1 from "../../../assets/stripes1.png";
+import Group2 from "../../../assets/stripe2.png";
+import group3 from "../../../assets/clock.png";
+import group4 from "../../../assets/coin.png";
 import group5 from "../../../assets/Vector.png";
 
 
@@ -11,7 +11,7 @@ const Banner = () => {
     return (
         <div className="bg-[#2B54FF] mt-10 w-screen h-auto  relative overflow-hidden ">
             <img src={Group1} alt="stripes" className="absolute -top-72 right-0 h-[500px]  lg:h-[800px] " />
-            <img src={Group2} alt="img" className="absolute -bottom-[264px] h-[400px] lg:h-auto" />
+            <img src={Group2} alt="img" className="absolute -bottom-[264px] h-[390px] lg:h-auto" />
             <div className="flex items-center justify-center">
                 <div className="w-[60%] flex flex-col mt-44 ">
                     <h1 className="text-3xl font-serif text-white text-left">

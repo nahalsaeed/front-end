@@ -2,17 +2,20 @@ import React from "react";
 import Facebook from "../../assets/logos_facebook.svg";
 import Google from "../../assets/flat-color-icons_google.svg";
 import { Link } from "react-router-dom";
-
+import circle from "../../assets/Ellipse 1.png";
+import circle2 from "../../assets/Ellipse 2.png";
+import circle3 from "../../assets/Ellipse 3.png";
 const SignUp = () => {
   return (
 
     <div className="flex relative  h-[100vh] max-w-screen overflow-hidden  ">
-      <div className="h-[85vh] w-[100vh] mt-14 rounded-[100%] bg-[#2B54FF] -ml-[70vh]"></div>
-      <div className="h-[5vh] w-[5vh] mt-32 rounded-[100%] bg-[#4CAF50] -ml-40 -z-40"></div>
-      <div className="absolute -top-80 -right-56 h-[70vh] w-[70vh] rounded-[100%] bg-gray-300 flex justify-end"></div>
+      <div className="absolute left-0 -ml-[5vh] top-[5%] "><img src={circle} alt="circle" className="h-[90vh] w-auto sm:hidden lg:visible" /></div>
+      <div className="absolute left-0 mt-28  ml-32 -z-10"><img src={circle2} alt="circle"  className="h-[50px] w-auto "/></div>
+      <div className="absolute top-0 right-0"><img src={circle3} alt="circle" className="h-[37vh]" /></div>
+      {/* <div className="absolute -top-80 -right-56 h-[70vh] w-[70vh] rounded-[100%] bg-gray-300 flex justify-end"></div> */}
       <div className="absolute h-[4vh] w-[20vh] transform rotate-[135deg] right-[370px] bg-[#2B54FF]"></div>
 
-      <div className=" ml-80 flex justify-center flex-col text-center w-[480px]">
+      <div className=" ml-[35%] flex justify-center items-center flex-col text-center w-[480px]">
         <h1 className="text-5xl font-bold text-center mb-20  text-black ">Create Account</h1>
         <form className="space-y-8 ">
           <input

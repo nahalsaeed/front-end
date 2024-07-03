@@ -1,12 +1,12 @@
 import React from "react";
-import Img1 from "../../../assets/3260 1 (1).png";
-import Img2 from "../../../assets/3260 2.png";
-import Img3 from "../../../assets/Mask group (1).png";
-import Img4 from "../../../assets/Mask group (2).png";
-import Img5 from "../../../assets/Mask group (3).png";
-import Img6 from "../../../assets/Mask group (4).png";
-import Img7 from "../../../assets/Mask group (5).png";
-import Img8 from "../../../assets/Mask group.png";
+import Img1 from "../../../assets/network2.png";
+import Img2 from "../../../assets/network3.png";
+import Img3 from "../../../assets/img1.png";
+import Img4 from "../../../assets/img2.png";
+import Img5 from "../../../assets/img3.png";
+import Img6 from "../../../assets/img4.png";
+import Img7 from "../../../assets/img5.png";
+import Img8 from "../../../assets/img6.png";
 
 
 
