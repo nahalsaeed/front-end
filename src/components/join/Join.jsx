@@ -30,7 +30,7 @@ const Join = () => {
                 </div>
             </div>
             <div className="flex justify-center mt-10">
-                <div className=" w-[60%] grid grid-cols-2 gap-4 mt-6">
+                <div className=" w-[60%] grid grid-cols-1 lg:grid-cols-2 gap-4 mt-6">
                     {images.map((image, index) => (
                         <img key={index} src={image} alt={`Image ${index + 1}`} className="max-w-full h-auto" />
                     ))}

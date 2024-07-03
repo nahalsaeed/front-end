@@ -15,9 +15,9 @@ const HeroSection = () => {
             <div className="flex justify-center  -mt-44 ">
                 <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-8 mx-8 lg:mx-16">
                     <div className="text-left lg:max-w-[80%] h-auto lg:ml-20 lg:mt-10">
-                        <h1 className="text-7xl font-bold font-serif">Learn With</h1>
+                        <h1 className="text-7xl font-bold font-serif md:text-5xl ">Learn With</h1>
                         <br />
-                        <h1 className="text-6xl font-bold font-serif text-[#2B54FF]">SQL QUIZBOT</h1>
+                        <h1 className="text-6xl font-bold font-serif text-[#2B54FF] md:text-4xl ">SQL QUIZBOT</h1>
                         <br />
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris lacus leo, feugiat id faucibus in, rhoncus eu nisi. Nunc tincidunt dignissim urna eu iaculis. Suspendisse nulla tortor, volutpat nondictum vel, imperdiet at nulla. Pellentesque lobortis quam lorem, pretium ullamcorper lectus.</p>
                         <div className="text-sm flex flex-row gap-2 mt-10">
