@@ -46,8 +46,8 @@ const Help = () => {
     ];
     return (
         <div>
-            <img src={Img1} alt="img1" className="absolute left-0 h-screen" />
-            <img src={Img2} alt="img2" className="absolute right-0 h-screen" />
+            <img src={Img1} alt="img1" className="absolute left-0 h-auto" />
+            <img src={Img2} alt="img2" className="absolute right-0 h-auto" />
             <div className="flex items-center justify-center">
                 <div className=" relative mt-0 w-[75%] lg:w-[55%] flex flex-col h-auto   ">
                     <h1 className="text-3xl font-serif text-center mt-12">How we can <span className="text-bold text-[#2B54FF]">HELP YOU!</span> </h1>
