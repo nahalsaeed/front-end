@@ -14,7 +14,7 @@
 }
 
 .herosectionimg{
-  background-image: url("C:\Users\Saeed Ahmed\Desktop\front-end\src\assets\network.png");
+  background-image: url("./assets/network.png");
   position: relative;
   height: 400px;
   width: 100%;
