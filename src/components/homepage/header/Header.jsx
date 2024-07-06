@@ -1,19 +1,28 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import HeroSection from "../herosection/HeroSection";
-import Banner from "../banner/Banner";
-import Help from "../help/Help";
-import Banner2 from "../banner2/Banner2";
-import Join from "../../join/Join";
-import Section from "../section/Section";
-import Footer from "../footer/Footer";
+import React, { useState, useEffect } from "react";
+import { Link,useNavigate } from "react-router-dom";
+import { auth } from "../../../process";
+import { onAuthStateChanged, signOut } from "firebase/auth";
 
 const Header = () => {
+  const [user, setUser] = useState(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  const navigate=useNavigate();
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setUser(user);
+      } else {
+        setUser(null);
+        navigate('/Login');
+      }
+    });
+
+    return () => unsubscribe(); 
+  }, []);
 
   return (
     <div className="overflow-hidden">
@@ -51,12 +60,27 @@ const Header = () => {
           </ul>
           &nbsp; &nbsp; &nbsp;
           <div className="hidden md:flex space-x-4">
-            <button className="text-white text-sm border p-2 rounded-3xl hover:text-[#2B54FF] hover:bg-white">
-              <Link to="/SignUp">Create Account</Link>
-            </button>
-            <button className="bg-white text-sm border text-[#2B54FF] rounded-3xl px-8 hover:bg-[#2B54FF] hover:text-white hover:border-white">
-              <Link to="/Login">Login</Link>
-            </button>
+            {user === null ? (
+              <>
+                <button className="text-white text-sm border p-2 rounded-3xl hover:text-[#2B54FF] hover:bg-white">
+                  <Link to="/SignUp">Create Account</Link>
+                </button>
+                <button className="bg-white text-sm border text-[#2B54FF] rounded-3xl px-8 hover:bg-[#2B54FF] hover:text-white hover:border-white">
+                  <Link to="/Login">Login</Link>
+                </button>
+              </>
+            ) : (
+              <>
+                <button className="text-white text-sm border p-2 rounded-3xl hover:text-[#2B54FF] hover:bg-white">
+                  <Link to="/Profile">{user.email}</Link>
+                </button>
+                <button onClick={()=>{
+                  signOut(auth)
+                }} className="bg-white text-sm border text-red-700 rounded-3xl px-8 hover:bg-red-800 hover:text-white hover:border-white">
+                  Logout 
+                </button>
+              </>
+            )}
           </div>
         </div>
 
@@ -73,14 +97,7 @@ const Header = () => {
                 <a href="#contact" className="text-white hover:text-gray-200 block px-3 py-2 rounded-md text-base font-medium">Contact Us</a>
               </li>
             </ul>
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-              <button className="w-full text-white text-sm border p-2 rounded-3xl hover:text-[#2B54FF] hover:bg-white">
-                <Link to="/SignUp">Create Account</Link>
-              </button>
-              <button className="w-full bg-white text-sm border text-[#2B54FF] rounded-3xl px-8 hover:bg-[#2B54FF] hover:text-white hover:border-white mt-2">
-                <Link to="/Login">Login</Link>
-              </button>
-            </div>
+            
           </div>
         )}
       </nav>
