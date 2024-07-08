@@ -1,32 +1,32 @@
+// src/components/Login.js
 import React from "react";
 import Subtract from "../../assets/Subtract.png";
 import circle from "../../assets/Ellipse 1.png";
 import circle2 from "../../assets/Ellipse 2.png";
 import { Link, useNavigate } from "react-router-dom"; 
-import { auth } from "../../process";
-import { signInWithEmailAndPassword } from "firebase/auth";
 import Providers from "../providers/Providers";
 import { LoginSchema } from "../../zod/zod-validations";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
+import { useDispatch, useSelector } from 'react-redux';
+import { login } from "../../redux/slices/authSlices";
+
 
 const Login = () => {
   const navigate = useNavigate(); 
+  const dispatch = useDispatch();
   const { register, handleSubmit, formState: { errors } } = useForm({
     resolver: zodResolver(LoginSchema)
   });
 
   const handleLogin = async (data) => {
     const { email, password } = data;
-
-    try {
-      const userCredential = await signInWithEmailAndPassword(auth, email, password);
-      const user = userCredential.user;
-      console.log('User logged in:', user);
-      
+    const response = await dispatch(login({ email, password }));
+    
+    if (response.meta.requestStatus === 'fulfilled') {
       navigate('/');
-    } catch (error) {
-      console.error('Error signing in:', error.message);
+    } else {
+      console.error('Error signing in:', response.error.message);
     }
   };
 
@@ -81,7 +81,7 @@ const Login = () => {
             </p>
             <p className="text-sm text-gray-500">Or continue with</p>
           </div>
-          <Providers/>
+          <Providers />
         </div>
       </div>
       <div className="absolute -bottom-10 -right-10">

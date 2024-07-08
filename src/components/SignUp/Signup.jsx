@@ -6,29 +6,45 @@ import circle3 from "../../assets/Ellipse 3.png";
 import { auth } from "../../process";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import Providers from "../providers/Providers";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { SignupSchema } from "../../zod/zod-validations";
+import { useDispatch } from "react-redux";
+import { signup } from "../../redux/slices/authSlices";
 
 
 const SignUp = () => {
   const navigate = useNavigate();
-  const { register, handleSubmit, formState: { errors } } = useForm({
-    resolver: zodResolver(SignupSchema)
+  const [formData, setFormData] = useState({
+    username: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
   });
+  const dispatch = useDispatch();
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
 
-  //signup with email and password
-  const handleSignUp = async (data) => {
-    const { email, password, username } = data;
+  const handleSignUp = async (e) => {
+    e.preventDefault();
+    const { email, password, username } = formData;
 
-    try {
-      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
-      const user = userCredential.user;
-      console.log('User created:', user);
-      navigate("/login");
-    } catch (error) {
-      console.error('Error signing up:', error.message);
+    const response = await dispatch(signup({ email, password,username }));
+    
+    if (response.meta.requestStatus === 'fulfilled') {
+      navigate('/login');
+    } else {
+      console.error('Error signing in:', response.error.message);
     }
+    // try {
+    //   const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+    //   const user = userCredential.user;
+    //   console.log('User created:', user);
+    //   navigate("/login");
+    // } catch (error) {
+    //   console.error('Error signing up:', error.message);
+    // }
   };
 
   return (
@@ -40,42 +56,46 @@ const SignUp = () => {
 
       <div className="flex justify-center items-center flex-col text-center w-full lg:w-[480px] lg:ml-[35%]">
         <h1 className="text-5xl font-bold text-center mb-20 text-black">Create Account</h1>
-        <form className="space-y-8 w-full px-4 sm:px-6 md:px-8" onSubmit={handleSubmit(handleSignUp)}>
+        <form className="space-y-8 w-full px-4 sm:px-6 md:px-8" onSubmit={handleSignUp}>
           <div>
             <input
               type="text"
+              name="username"
               placeholder="Username"
               className="w-full p-2 border-b-2 hover:border-blue-600"
-              {...register("username")}
+              value={formData.username}
+              onChange={handleChange}
             />
-            {errors.username && <p className="text-red-500 text-sm flex justify-start text-xs">{errors.username.message}</p>}
           </div>
           <div>
             <input
               type="email"
+              name="email"
               placeholder="Email"
               className="w-full p-2 border-b-2 hover:border-blue-600"
-              {...register("email")}
+              value={formData.email}
+              onChange={handleChange}
             />
-            {errors.email && <p className="text-red-500 text-sm flex justify-start text-xs">{errors.email.message}</p>}
           </div>
           <div>
             <input
               type="password"
+              name="password"
               placeholder="Password"
               className="w-full p-2 border-b-2 hover:border-blue-600"
-              {...register("password")}
+              value={formData.password}
+              onChange={handleChange}
             />
-            {errors.password && <p className="text-red-500 text-sm flex justify-start text-xs">{errors.password.message}</p>}
           </div>
           <div>
             <input
               type="password"
+              name="confirmPassword"
               placeholder="Confirm Password"
               className="w-full p-2 border-b-2 hover:border-blue-600"
-              {...register("confirmPassword")}
+              value={formData.confirmPassword}
+              onChange={handleChange}
             />
-            {errors.confirmPassword && <p className="text-red-500 text-sm flex justify-start text-xs">{errors.confirmPassword.message}</p>}
           </div>
           <button
             type="submit"
